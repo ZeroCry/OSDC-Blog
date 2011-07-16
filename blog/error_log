@@ -1,0 +1,1 @@
+[07-Jul-2011 15:52:01] PHP Fatal error:  Call to a member function get() on a non-object in /home/amreesh1/public_html/opensource/blog/wp-includes/cache.php on line 93

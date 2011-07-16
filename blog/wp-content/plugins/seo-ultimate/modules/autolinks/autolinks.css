@@ -1,0 +1,25 @@
+#su-autolinks table.widefat,
+#su-autolinks table.widefat input.textbox {
+	width: 100%;
+}
+
+#su-autolinks table.widefat td {
+	vertical-align: middle;
+}
+
+#su-autolinks table.widefat td.su-link-options label {
+	margin-right: 1em;
+}
+
+#su-autolinks table.widefat td.su-link-to {
+	width: 25em;
+}
+
+#su-autolinks table.widefat td.su-link-options {
+	width: 17em;
+}
+
+#su-autolinks table.widefat td.su-link-delete {
+	width: 3em;
+	text-align: center;
+}

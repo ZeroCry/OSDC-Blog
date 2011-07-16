@@ -1,0 +1,352 @@
+/*
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl.html
+Theme Name: Renova
+Theme URI: http://renova.llow.it/wordpress
+Author: Lorenzo Lagana'
+Author URI: http://www.llow.it
+Description: Renova is a minimalist theme for wordpress.Provides a very simple index with no thumbnails, 4 Widget area, 6 Colors, and a theme options page with the possibility to insert your logo, disabable/enable subfooter for the widget area, social network link and many other functions and full support for wordpress menu navigation.
+Tags: orange, blue, red, green, light, one-column, fixed-width, custom-colors, theme-options, custom-menu
+Version: 1.0.1
+*/
+
+/* General----------------------------------------------------------------------------------------------------------------------------- */
+body{}
+*{}
+a:focus{}
+html{}
+img{}
+
+ /* General Elements------------------------------------------------------------------------------------------------------------------- */
+a, a:link, a:focus, a:active,a:visited{color: #333;}
+a:hover {color: #FF00FF;}
+a.button{}
+p{ color:#777;}
+h1{color: #555; }
+h1.titlepage{}
+h1.titlepage a:hover {color: #FF00FF;}
+h2{ color: #555;}
+h3{ color: #555;}
+h4{ color: #555;}
+h5{ color: #555;}
+h6{ color: #555;}
+ul{}
+ol{}
+li{color: #777;}
+dt{}
+dd{}
+strong{}
+em{}
+blockquote{}
+blockquote p{ color: #555; }
+pre{}
+code{}
+underline{}
+strike{}
+small{}
+form textarea{ color: #222; }
+form input{ color: #222; }
+form input:focus, form textarea:focus{color: #222;}
+label{color: #999; }
+
+ /* General Elements Images on post and pages----------------------------------------------------------------------------------------*/
+img{}
+img.alignleft{}
+a img.alignleft{}
+img.alignright{}
+a img.alignright{}
+img.aligncenter{}
+a img.aligncenter{}
+.aligncenter, div.aligncenter {}
+.alignleft {}
+.alignright {}
+.wp-caption {}
+.wp-caption img {	}
+.wp-caption p.wp-caption-text {}
+.gallery { }
+.gallery .gallery-item { }
+.gallery img { }
+.gallery-caption { }
+.gallery br {}
+/* available Columns--------------------------------------------------------------------------------------------------------------- */
+.col-2 {  }
+.col-3 {  }
+.col-4 {  }
+.col-5 {  }
+.col-6 {  }
+.col-7 {  }
+.col-8 {  }
+.col-9 {  }
+
+ /* Header ------------------------------------------------------------------------------------------------------------------------ */
+#header{}
+#header img{}
+
+ /* Logo - Div inside Header------------------------------------------------------------------------------------------------------- */
+#logo{}/*Standard size for logo image are 60x180px */
+#logo img{}
+#logo h1{ color: #555;    }/*Headings for replacing Title blog */
+#logo h2{ color: #aaa;    }/*Headings for replacing Description blog */
+#logo a,#logo a:link,#logo a:active,#logo a:focus{color: #555; }
+#logo a:hover{color: #FF00FF;}
+
+ /* Me Description Text ----------------------------------------------------------------------------------------------------------- */
+#me{  }
+#me ul {}
+#me li { }
+#me li a{  color:#777;}
+#me li a:hover{  color:#FF00FF;}
+#me li.nobullet{}
+#me h1{ color:#999;  }
+#me h1 a,#me h1 a:link, #me h1 a:active, #me h1 a:focus{color:#777;  }
+#me h1 a:hover{}
+#me img.icon2{ }
+
+
+/* Wrap Menu - When Wp-Navigation Menu is Enabled ---------------------------------------------------------------------------------- */
+#wrap_container{ }
+#wrap_mobile{}
+.close{ }
+.open{}
+#wrap ul { }
+#wrap ul ul { } /*unordered list within an unordered list*/
+#wrap ul ul ul {  } /*unordered list within an unordered list*/
+#wrap li { }
+#wrap li:hover { }/* each navigation item*/
+#wrap li a { color: #777; } /*each navigation item anchor*/
+#wrap li:hover ul {}
+#wrap li:hover ul {}
+#wrap li ul { } /* unordered list if there is drop down items*/
+#wrap li li {} /* each drop down navigation item*/
+#wrap li li:hover {} /* each drop down navigation item*/
+#wrap li li a {}/* each drap down navigation item anchor*/
+#wrap li li span{background:#FF00FF;}
+#wrap li li li { }
+#wrap li li li:hover {  } /* each drop down navigation item*/
+#wrap li li li a {}/* each drap down navigation item anchor*/
+#wrap li.current-post-ancestor { background:#FF00FF; }/* Class for Current Page */
+#wrap li.current_page_item { background:#FF00FF;}/* Class for Current Page */
+#wrap li.current-cat { background:#FF00FF; } /* Class for Current Category */
+#wrap li.current-menu-item { background:#FF00FF;  }/* Class for any other current Menu Item */
+#wrap li.current-post-ancestor a {  color:#fff;}/* Class for Current Page */
+#wrap li.current_page_item  a{  color:#fff;}/* Class for Current Page */
+#wrap li.current-cat a {  color:#fff;} /* Class for Current Category */
+#wrap li.current-menu-item  a{  color:#fff; }/* Class for any other current Menu Item */
+
+
+/* Wrap Menu - When Wp-Navigation Menu is Disabled -------------------------------------------------------------------------------- */
+.navigation {}
+.navigation ul {}
+.navigation li {}
+.navigation li:hover {}/* each navigation item*/
+.navigation li a {color: #777; } /*each navigation item anchor*/
+.navigation li a:hover {background:#FF00FF; color:#fff;} /*each navigation item anchor*/
+.navigation li.current-post-ancestor { background:#FF00FF; }/* Class for Current Page */
+.navigation li.current_page_item {background:#FF00FF; }/* Class for Current Page */
+.navigation li.current-cat { background:#FF00FF; } /* Class for Current Category */
+.navigation li.current-menu-item { background:#FF00FF;  }/* Class for any other current Menu Item */
+.navigation li.current-post-ancestor a {  color:#fff;}/* Class for Current Page */
+.navigation li.current_page_item  a{  color:#fff;}/* Class for Current Page */
+.navigation li.current-cat a {  color:#fff;} /* Class for Current Category */
+.navigation li.current-menu-item  a{  color:#fff; }/* Class for any other current Menu Item */
+
+ /*Search Form --------------------------------------------------------------------------------------------------------------------- */
+input#s{ color: #bbb;  }
+input#s:focus{ color: #555;}
+.search{}
+div.search{}/*per gli altri browser */
+*:first-child + html div.search{}/*per IE7 */ /*Class Navigation */
+
+/* Container ----------------------------------------------------------------------------------------------------------------------- */
+#container{ background:#fff;   }
+div.container{}
+
+/* Content - Main body ------------------------------------------------------------------------------------------------------------- */
+#content{  }
+
+/* First Post - Index.php ---------------------------------------------------------------------------------------------------------- */
+.first-post{ background:#fff;  }
+.first-post-text{ }
+.first-post p{color: #777 ; }
+.first-post h1{  }
+.first-post h1 a ,.first-post  h1 a:link, .first-post  h1 a:active, .first-post  h1 a:focus {color: #555;}
+.first-post h1 a:hover {color: #FF00FF;}
+.first-post a, .first-post a:link, .first-post a:active, .first-post a:focus {color: #FF00FF;}
+.first-post .comments a { color:#FF00FF;}
+.first-post span.moretext a {color:#777;}
+.first-post img{ }
+.first-post-text img { }
+.first-post.sticky {}
+.first-post .edit a,.first-post .edit a:link, .first-post .edit a:active, .first-post .edit a:focus{color: #FF00FF; }
+.first-post .edit li a, .first-post .edit li a:link, .first-post .edit li a:active, .first-post .edit li a:focus{color: #FF00FF; }
+
+/* First Post - Class for information on float:left  ------------------------------------------------------------------------------- */
+.info_index{}
+.info_time{ color:#999; }
+.info_category{ color:#777; }
+.info_sticky{background-color:#FF00FF;}
+.info_index a,.info_index a:link, .info_index a:active, .info_index a:focus{color: #FF00FF;}
+
+
+ /*Navigation Page ----------------------------------------------------------------------------------------------------------------- */
+#navigation{}
+.prevleft{ }
+.prevleft:hover a{ color:#FF00FF;}
+.prevleft a{ color: #777; }
+.nextright{ }
+.nextright:hover a{ color:#FF00FF;}
+.nextright a{ color: #777; }
+
+/* Archive Post - archive.php - search.php ----------------------------------------------------------------------------------------- */
+.archive-post{ background:#fff;  }
+.archive-post-text{ }
+.archive-post h1{}
+.archive-post h1 a ,.archive-post  h1 a:link, .archive-post  h1 a:active, .archive-post  h1 a:focus , .archive-post  h1 a:hover {color: #555;  }
+.archive-post h1 a:hover {color: #FF00FF;}
+.archive-post p{ color:#777;}
+.archive-post p a, .archive-post p a:link, .archive-post p a:active, .archive-post p a:focus, .archive-post p a:visited {color: #FF00FF; }
+.archive-post p a:hover {}
+.archive-post span.moretext a {color:#777;}
+.archive-post img{}
+.archive-post-text img {background:#f7f7f7;  }
+.archive-post .comments a{ color:#bbb;}
+
+
+/* Single Post - single.php ----------------------------------------------------------------------------------------------------------- */
+#post{}
+#post p{ color:#555; }
+#post h1{}
+#post h1 a ,#post  h1 a:link, #post  h1 a:active, #post  h1 a:focus {color: #555;  }
+#post h1 a:hover{color:#FF00FF}
+#post .edit ul{}
+#post .edit li{ color:#aaa;}
+#post .edit li a:hover{color: #FF00FF;}
+#post .edit li a, #post .edit li a:link{color: #FF00FF;  }
+#post .edit li.com_left a{   color:#ccc;}
+#post p a, #post p a:link, #post p a:active, #post p a:focus, #post p a:visited {color: #FF00FF;}
+#post p a:hover { color: #222;}
+
+ /*Post Navigation - Links on single.php for navigation between posts ------------------------------------------------------------------ */
+#post_navigation{ color: #777; }
+.prevpostleft{}
+.prevpostleft:hover a{ color:#333;}
+.prevpostleft a{ color: #FF00FF; }
+.nextpostright{ }
+.nextpostright:hover a{ color:#333;}
+.nextpostright a{ color: #FF00FF; }
+
+/* Author Info in the single post - single.php ----------------------------------------------------------------------------------------- */
+#author-info{ }
+#author-image{}
+#author-info p { color:#777; }
+#author-info h5{ color: #111; }
+#author-info a {color:#FF00FF;}
+
+/* Div for Facebook share and Retweet Button - single.php ------------------------------------------------------------------------------- */
+#post_social{ color: #222; }
+#post_social ul{}
+#post_social li{}
+.retweet{}
+
+
+ /* Subfooter --------------------------------------------------------------------------------------------------------------------------- */
+#subfooter{}
+#widget1{}/*Widgets subfooter */
+#widget2{}
+#widget3{}
+#widget4{}/*Ultimo Widget del subfooter */
+#subfooter h3{ color: #222; }/* Titolo Widgets Sidebar */
+#subfooter ul{}
+#subfooter li{ color: #777;   }
+#subfooter p{ color: #777;   }
+#subfooter a,#subfooter a:link,#subfooter a:active,#subfooter a:focus{color: #777;}
+#subfooter a:hover{color: #FF00FF;}
+#subfooter li:hover{}
+#subfooter img.icon{}/*Class for so */
+#sidebar p{  color: #777; }
+.textwidget{ color: #777; }
+
+
+/* Footer ------------------------------------------------------------------------------------------------------------------------------- */
+#footer{ color: #222; }
+#footer a, #footer a:link, #footer a:focus, #footer a:active{color:#222;}
+#footer a:hover{color: #FF00FF;}
+#footer p{color: #777;}
+#footer h1{color: #777;   }
+#footer h1.right{color: #777; }
+#footer h1.right  a{color: #222;      }
+#footer ul{ }
+#footer li{color: #777;    }
+#footer li.nobullet a{color: #777;   }
+#footer li.nobullet a:hover{color: #FF00FF; }
+#footer li.templatename{color: #777;   }
+#footer img.icon2{}
+
+ /* Edit tool under every single post  -------------------------------------------------------------------------------------------------- */
+.edit{ }
+.edit ul{ }
+.edit li{ color: #555; }
+.edit a{color: #FF00FF; }
+.edit a:link, .edit a:visited{color: #FF00FF; }
+.edit a:hover{color: #FF00FF;}
+.time{ }
+
+ /* Current Browsing Div in category pages and archive pages ---------------------------------------------------------------------------- */
+#currentbrowsing{ color: #222;    }
+#currentbrowsing h1{ color: #777; }
+#currentbrowsing h2{ color: #FF00FF; }
+
+ /* Archive Ul  */
+#archive ul {}
+#archive li{color: #006699; }
+#archive li a, #archive li a:link, #archive li a:active, #archive li a:visited{}
+#archive li a:hover {color: #006699;}
+
+/* Profile Avatar - single.php ---------------------------------------------------------------------------------------------------------- */
+.avatar{}
+img.avatar{}
+img.avatar:hover{}
+/* Comments Template -------------------------------------------------------------------------------------------------------------------- */
+ol.commentlist {}
+ol.commentlist a, ol.commentlist a:link, ol.commentlist a:active, ol.commentlist a:visited{color: #FF00FF;}
+ol.commentlist a:hover{color:#555;}
+ol.commentlist li {}
+ol.commentlist li.alt {}
+ol.commentlist li.bypostauthor {  }
+ol.commentlist li.comment-author-admin { }
+ol.commentlist li p{color: #555; }
+ol.commentlist li.comment div.reply { }
+ol.commentlist li.comment div.reply:hover { }
+ol.commentlist li.comment div.reply a {color: #fff; }
+ol.commentlist li ul.children {  }
+ol.commentlist li ul.children li.depth-2 {  }
+ol.commentlist li ul.children li.depth-3 {  }
+ol.commentlist li ul.children li.depth-4 {  }
+ol.commentlist li ul.children li.depth-5 {  }
+input#submit{ color:#fff;  }
+input#submit:hover{ }
+
+
+/* Buttons Class ------------------------------------------------------------------------------------------------------------------------ */
+.more-link{}
+a.more-link:hover{}
+.submit_button{   color: #fff; }  /* Submit Button for comments */
+.submit_button:hover{ color: #FF00FF;  }
+.powered{}
+
+ /* Special Class ------------------------------------------------------------------------------------------------------------------------ */
+.hidden{}
+.go_mobile{ }
+.input_box{ }
+.form_box{}
+
+ /* Calendar Class ----------------------------------------------------------------------------------------------------------------------- */
+#wp-calendar {}
+#wp-calendar caption {tcolor: #222;}
+#wp-calendar td {color: #555;}
+#wp-calendar td a, #wp-calendar td a:link, #wp-calendar td a:active, #wp-calendar td a:focus {color:#FF00FF;}
+#wp-calendar td a:hover {color:#555;}
+#wp-calendar th {color: #777;}
+#wp-calendar  #prev   {}
+#wp-calendar  #next  {}
+#wp-calendar .pad {}

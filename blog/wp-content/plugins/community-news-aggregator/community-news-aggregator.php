@@ -1,0 +1,121 @@
+<?php
+/*
+Plugin Name: Community News Aggregator
+Version: 0.1
+Description: Lets a community's blog get external content from their members' blogs.
+Author: Ashish Dubey
+Author URI:	http://www.ashishdubey.info
+*/
+
+//Hook load_cna_menu() to admin menu load action
+register_activation_hook(__FILE__, 'cna_activate');
+add_action('admin_init','cna_init_admin_settings');
+add_action('admin_head','cna_include');
+add_action('admin_menu','cna_init');
+function cna_activate()
+{
+	$current_time_obj=new DateTime();
+		$current_time_string=$current_time_obj->format(DateTime::ATOM);
+		update_option("cna-last-update",$current_time_string);
+
+}
+function cna_include()
+{
+?>
+	<script> 
+	function cna_update()
+	{
+		jQuery("#cna-status-container").show();
+		jQuery.post(ajaxurl,{"action":"cna"},function(response)
+		{	
+			docparser=new DOMParser();
+			statusdoc=docparser.parseFromString(response,"text/xml");
+			status=statusdoc.getElementsByTagName("status")[0].childNodes[0].nodeValue;
+			if(status=="ok"){		
+				time=statusdoc.getElementsByTagName("time")[0].childNodes[0].nodeValue;
+				jQuery("#cna-loading").hide();
+				document.getElementById("cna-status").innerHTML="Updated";
+				document.getElementById("cna-update-time").innerHTML=time;			
+			}
+			else
+			{
+				jQuery("#cna-loading").hide();				
+				document.getElementById("cna-status").innerHTML=status;		
+			}
+		});
+	}
+	</script>
+<?php
+}
+$plugin_url=plugin_dir_url(dirname(__FILE__).'/community-news-aggregator.php');
+$plugin_dir=plugin_dir_path(dirname(__FILE__).'/community-news-aggregator.php');
+	
+include $plugin_dir.'/cna-update.php';
+add_action('wp_ajax_cna','cna_update_news');
+function cna_init()
+{
+	$user=wp_get_current_user();
+	$role=$user->roles[0];
+	if($role=='administrator')
+	{
+		admin_cna_menu();
+	}
+	else
+	{
+		subscriber_cna_menu();
+	}
+
+}
+function admin_cna_menu()
+{
+	add_menu_page("Community News Aggregator","Commmunity News Aggregator",'administrator','cna-parent-menu','');		
+	add_submenu_page("cna-parent-menu",'Community News Aggregator',"Configure Your Blog",'administrator','cna-parent-menu','create_menu');		
+	add_submenu_page('cna-parent-menu','Community News Aggregator','Settings','administrator','cna-admin-config','create_admin_page');
+	add_submenu_page('cna-parent-menu','Community News Aggregator','News Update','administrator','cna-news-update','create_update_page');
+}
+function subscriber_cna_menu()
+{
+	//create an admin menu and its page
+	//page title=Community News Aggregator
+	//Menu title=Configure Your Blog
+	//priviledge=administrator
+	//slug=<user the current php file to ommit the slug parameter>
+	//callback function=create_menu()
+	add_menu_page("Community News Aggregator","Commmunity News Aggregator",'subscriber','cna-parent-menu','');
+	add_submenu_page("cna-parent-menu",'Community News Aggregator',"Configure Your Blog",'subscriber','cna-parent-menu','create_menu');		
+	
+}
+function create_menu()
+{
+	$plugin_url=plugin_dir_url(dirname(__FILE__).'/community-news-aggregator.php');
+	$plugin_dir=plugin_dir_path(dirname(__FILE__).'/community-news-aggregator.php');
+
+
+
+	//load blog settings form
+	include $plugin_dir.'/cna-blog-settings-form.php';
+	
+//	add_action('admin_init','cna_init_blog_settings');
+}
+
+function create_admin_page()
+{
+	$plugin_url=plugin_dir_url(dirname(__FILE__).'/community-news-aggregator.php');
+	$plugin_dir=plugin_dir_path(dirname(__FILE__).'/community-news-aggregator.php');
+	include $plugin_dir.'/cna-admin.php';
+}
+
+function cna_init_admin_settings()
+{
+
+	register_setting('cna-settings','cna-community-label');
+	add_settings_section('cna-community-settings','','community_settings_form','cna-admin-config');
+	add_settings_field('cna-community-label','','community_label_string','cna-admin-config','cna-community-settings');	
+}
+
+function create_update_page()
+{
+	
+	cna_show_update_page();
+}
+?>

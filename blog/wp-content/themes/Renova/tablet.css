@@ -1,0 +1,208 @@
+/*
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl.html
+Theme Name: Renova
+Theme URI: http://renova.llow.it/wordpress
+Author: Lorenzo Lagana'
+Author URI: http://www.llow.it
+Description: Renova is a minimalist theme for wordpress.Provides a very simple index with no thumbnails, 4 Widget area, 6 Colors, and a theme options page with the possibility to insert your logo, disabable/enable subfooter for the widget area, social network link and many other functions and full support for wordpress menu navigation.
+Tags: orange, blue, red, green, light, one-column, fixed-width, custom-colors, theme-options, custom-menu
+Version: 1.0.1 Mobile Tablet
+*/
+
+
+/* General--------------------------------------------------------------------------------------------------------------------------- */
+body{ -webkit-text-size-adjust: none; padding: 0 0px !important;   }
+div {
+width: 100% !important;
+padding: 0 0 !important;
+}
+
+ /* General Elements-----------------------------------------------------------------------------------------------------------------*/
+h3{ margin: 15px 0 5px 0;}
+form textarea{width: 99% !important; border: 1px solid #ccc; color: #222; background: #f5f5f5;}
+form input{border: 1px solid #ccc; margin: 0; color: #222; background: #f5f5f5; width: 99% !important; height: 30px; line-height: 30px;}
+form input:focus, form textarea:focus{color: #222; background: #fff;}
+label{color: #999; line-height: 20px; height: 20px; }
+
+
+
+ /* General Elements Images on post and pages--------------------------------------------------------------------------------------- */
+img{ margin:0 0 40px 0; border:1px solid #ddd; padding:5px;}
+img.alignleft{margin: 0 20px 20px 0; float: left;}
+a img.alignleft{margin: 0 20px 20px 0; float: left;}
+img.alignright{margin: 0 0px 20px 20px; float: right;}
+a img.alignright{margin: 0 0px 20px 20px; float: right;}
+img.aligncenter{display: block; margin-left: auto; margin-right: auto; text-align:center;}
+a img.aligncenter{display: block; margin-left: auto; margin-right: auto; text-align:center;}
+
+ /* Header ------------------------------------------------------------------------------------------------------------------------ */
+#header{width:90%!important; height: 60px; margin:0px auto 0px auto;  padding:30px 0px 0 0px !important;  }
+
+ /* Logo - Div inside Header------------------------------------------------------------------------------------------------------- */
+#logo{ height: 60px; width: 100%;  text-align:left; }/*Standard size for logo image are 60x180px */
+
+ /* Me Description Text ----------------------------------------------------------------------------------------------------------- */
+#me{ height:auto; width:90% !important;  margin:0px auto 0px auto;  text-align:left; padding: 0 0px !important; }
+#me ul {padding: 0 0px; list-style: none; margin:0px 0 0 0px; list-style:none; display:block; }
+#me li { line-height: 16px; height: 30px;   }
+#me li.optional { display:block; font-size: 11px; letter-spacing:0px; line-height: 14px;    width:auto; padding:0 0px; text-align: left;  margin:0px 5px 20px 0; }
+#me li.changecolor {display:none; }
+#me h1{font-size: 20px; line-height: 24px;  margin: 0px 0 10px 0; }
+
+/* Wrap Menu - When Wp-Navigation Menu is Enabled */
+#wrap_container{ width:100%!important; background:#fff; border-bottom:1px solid #ddd;  border-top:1px solid #ddd; text-align:left; height:40px!important; line-height:40px; margin:0px auto 0px auto!important; }
+#wrap_mobile{visibility:hidden; display:none;}
+.close{visibility:hidden; display:none; }
+.open{visibility:hidden; display:none; }
+#wrap ul {padding: 0 0px; margin: 3px 0 0 0 !important; list-style:none;}
+#wrap ul ul { position:absolute;  display: none;  list-style: none;} /*unordered list within an unordered list*/
+#wrap ul ul ul { position:absolute;  display: none; visibility:hidden; z-index:6; left:150px; bottom:0px;   } /*unordered list within an unordered list*/
+#wrap li {list-style: none; float: left ; margin:5px 5px 0 0!important; text-indent:0px;  background:#fff; text-transform:uppercase; text-align: left;  }
+#wrap li:hover { background:#eee; }/* each navigation item*/
+#wrap li a {cursor:pointer; color: #777; display: block; font-size: 10px; letter-spacing:0px; line-height: 25px; height: 25px; text-transform:uppercase;   width:auto; padding:0 5px!important; text-align: left; position:relative; margin:0 0px;} /*each navigation item anchor*/
+#wrap li:hover ul {display: none; }
+#wrap li:hover ul {display: none; }
+#wrap li ul {position:absolute;  display: none; list-style:none; float: left; background:#eee; border-bottom:none; border-top:none; width:auto; } /* unordered list if there is drop down items*/
+#wrap li li {float: none ;  margin:0px 0px 0 0; width:150px; background:#eee; display: none; } /* each drop down navigation item*/
+#wrap li li:hover { background:#ddd; display: none; } /* each drop down navigation item*/
+#wrap li li a {text-align:left; line-height: 30px; height: 30px; display: none; }/* each drap down navigation item anchor*/
+#wrap li li span{background-image:url(images/bullet.gif); background-position: 5px 11px; background-repeat:no-repeat; display:block; float:right; width:20px;  height:20px; display: none; }
+#wrap li li li {float: none ;  margin:0px 0px 0 0; width:150px;  background:#ddd; display: none; }
+#wrap li li li:hover { background:#ccc; display: none; } /* each drop down navigation item*/
+#wrap li li li a {text-align:left; line-height: 30px; height: 30px; display: none; }/* each drap down navigation item anchor*/
+#wrap li.current-post-ancestor { background:#009DFF; }/* Class for Current Page */
+#wrap li.current_page_item { background:#009DFF;}/* Class for Current Page */
+#wrap li.current-cat { background:#009DFF; } /* Class for Current Category */
+#wrap li.current-menu-item { background:#009DFF;  }/* Class for any other current Menu Item */
+#wrap li.current-post-ancestor a {  color:#fff;}/* Class for Current Page */
+#wrap li.current_page_item  a{  color:#fff;}/* Class for Current Page */
+#wrap li.current-cat a {  color:#fff;} /* Class for Current Category */
+#wrap li.current-menu-item  a{  color:#fff; }/* Class for any other current Menu Item */
+
+/* Wrap Menu - When Wp-Navigation Menu is Disabled */
+.navigation {text-align:left;}
+.navigation ul {padding: 0 0px; list-style: none; margin: 0px; list-style:none;}
+.navigation li {list-style: none;float: left ;margin:5px 5px 0 0; background:#fff; text-transform:uppercase; text-align: left; }
+.navigation li:hover {}/* each navigation item*/
+.navigation li a {cursor:pointer; color: #777; display: block; font-size: 10px; letter-spacing:0px; line-height: 25px; height: 25px; text-transform:uppercase;   width:auto; padding:0 5px; text-align: left; position:relative; margin:0 0px;} /*each navigation item anchor*/
+.navigation li a:hover {background:#009DFF; color:#fff;} /*each navigation item anchor*/
+.navigation li.current-post-ancestor { background:#009DFF; }/* Class for Current Page */
+.navigation li.current_page_item {background:#009DFF; }/* Class for Current Page */
+.navigation li.current-cat { background:#009DFF; } /* Class for Current Category */
+.navigation li.current-menu-item { background:#009DFF;  }/* Class for any other current Menu Item */
+.navigation li.current-post-ancestor a {  color:#fff;}/* Class for Current Page */
+.navigation li.current_page_item  a{  color:#fff;}/* Class for Current Page */
+.navigation li.current-cat a {  color:#fff;} /* Class for Current Category */
+.navigation li.current-menu-item  a{  color:#fff; }/* Class for any other current Menu Item */
+
+ /*Search Form --------------------------------------------------------------------------------------------------------------------- */
+input#s{margin: 0px 0 0px 0!important; line-height: 35px; height:35px!important; width: 75%!important;  text-align: left; color: #bbb;  font-size: 11px; border:none;	 letter-spacing: 0px; font-weight: normal; text-indent: 16px;  background-color:#fff; background-image:url(images/search_16.png); background-repeat:no-repeat; background-position:0px 12px; }
+input#s:focus{background-color: #eee; color: #555;}
+.search{padding:0px 0 0 0!important; border-top: 1px solid #ddd;}
+
+/* Container ----------------------------------------------------------------------------------------------------------------------- */
+#container{width:90%!important; background:#fff; padding: 20px !important;  text-align:left;  margin:30px auto 60px auto !important;   }
+
+/* Content - Main body ------------------------------------------------------------------------------------------------------------- */
+#content{width:100%!important;  border-bottom:1px solid #ddd; border-top:1px solid #fff;   }/* corpo centrale */
+
+/* First Post - Index.php ---------------------------------------------------------------------------------------------------------- */
+.first-post{padding:15px 0px 15px 0px !important;  min-height: 100px; overflow:hidden; background:#fff;width:100%!important;  border-bottom:1px solid #ddd; }
+.first-post h1{font-size: 20px;  }
+.first-post .comments a{padding:0 0px 0 0 !important; margin:5px 0 0 0 !important; float:right!important; text-align:right!important; width:10%!important;} 
+.first-post-text{ height: auto; 5px 0px !important;  margin:0 0 0 20%!important; width: 100% !important;}
+
+
+/* First Post - Class for information on float:left  ------------------------------------------------------------------------------- */
+.info_index{width:20%!important; float:left!important; text-align:left; padding: 0 0px !important; }
+.info_time{font-size:24px; line-height:24px; font-weight:normal;letter-spacing: -1px; color:#999; }
+.info_category{font-size:11px; line-height:14px; font-weight:normal; margin:8px 0 0 0; color:#777; }
+.info_sticky{background-color:#009DFF; width:75%!important; height:20px; font-weight:bold; line-height:20px; text-align:center; font-size:11px; color:#fff; margin:10px 0 0 0;}
+
+
+ /*Navigation Page ----------------------------------------------------------------------------------------------------------------- */
+#navigation{width:100%!important; height:40px!important; }
+.prevleft{  height:40px!important;line-height: 40px; text-align: left; font-size: 11px;  letter-spacing: 0px; font-weight: normal;  text-indent: 0px; float:left!important; width:50% !important;}
+.prevleft a{ color: #777;   }
+.nextright{  height:40px!important; line-height: 40px; text-align: right; font-size: 11px;   letter-spacing: 0px; font-weight: normal; display:block; float:right!important; width:50% !important; text-indent:0px;  }
+.nextright a{ color: #777;   }
+
+/* Archive Post - archive.php - search.php ----------------------------------------------------------------------------------------- */
+.archive-post{  padding:15px 0px 15px 0px !important;   }
+.archive-post h1{font-size: 20px; line-height: 24px;}
+.archive-post p{margin: 0 0 20px 0; font-size: 12px; line-height:20px;  }
+.archive-post .comments a{width:auto;padding-right:5px; }
+
+/* Single Post - single.php ----------------------------------------------------------------------------------------------------------- */
+#post{width: auto;}
+#post img{  margin:0 0 40px 0; border:1px solid #ddd; padding:5px;}
+#post img.alignleft{margin: 0 30px 10px 0; float: left;}
+#post a img.alignleft{margin: 0 30px 10px 0; float: left;}
+#post img.alignright{margin: 0 0px 10px 30px; float: right;}
+#post a img.alignright{margin: 0 0px 10px 30px; float: right;}
+
+
+
+ /*Post Navigation - Links on single.php for navigation between posts ------------------------------------------------------------------ */
+#post_navigation{font-size: 11px; line-height: 30px; color: #777; border-bottom: 1px solid #ddd;  width:auto;  letter-spacing: 0px; font-weight: bold; padding: 5px 5px; text-indent: 5px; margin: 0px 0 30px 0!important; height: 30px;}
+.prevpostleft{ line-height: 30px; height: 30px!important; text-align: left; font-size: 11px;   letter-spacing: 0px; font-weight: normal;  text-indent: 0px; float:left!important; width:50% !important;}
+.prevpostleft a{ color: #009DFF; }
+.nextpostright{ line-height: 30px; height: 30px!important;   text-align: right; font-size: 11px;  letter-spacing: 0px; font-weight: normal; display:block; float:right!important; width:50% !important;   text-indent: 0px;}
+.nextpostright a{ color: #009DFF; }
+
+/* Author Info in the single post - single.php ----------------------------------------------------------------------------------------- */
+#author-info{ width:100%; padding: 10px 0 !important; margin:50px 0 0 0 !important; }
+
+/* Div for Facebook share and Retweet Button - single.php ------------------------------------------------------------------------------- */
+#post_social{   border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;  width:100%;   height:60px; padding:10px 0 !important;}
+#post_social ul{width: 100%; height: 0px;}
+#post_social li{width: 100%; padding: 0px 0px; list-style: none;  font-size: 11px;}
+.retweet{ float:none; padding: 3px 0 0 0;}
+
+
+ /* Subfooter --------------------------------------------------------------------------------------------------------------------------- */
+#subfooter{display:none;}
+
+/* Footer ------------------------------------------------------------------------------------------------------------------------------- */
+#footer{  margin:0px auto 30px auto !important;  width:100%!important;  padding:10px 0 0 0 !important;   }
+#footer h1{ display:block; width:50%!important; height:30px; line-height:30px; }
+#footer h1.right{ color: #777; line-height:18px; padding: 0 0px 0 0px; float:right !important; width:50%!important; text-align:right; margin:5px 0 0 0 !important; }
+#footer ul{ margin:20px 0 0 0;}
+#footer li{color: #777;  font-size: 11px; display: inline; list-style-type: none; margin: 0; padding:0 5px 0 0; line-height:24px;   }
+
+/* Comments Template -------------------------------------------------------------------------------------------------------------------- */
+ol.commentlist {width: auto; list-style:none; padding-left:0px;}
+ol.commentlist a, ol.commentlist a:link, ol.commentlist a:active, ol.commentlist a:visited{color: #009DFF;}
+ol.commentlist a:hover{color:#555;}
+ol.commentlist li {margin: 20px 0;  list-style: none; list-style-position: outside; min-height: 150px;  background:#fff; border: 1px solid #ddd; width:95%; padding:10px;}
+ol.commentlist li.alt {}
+ol.commentlist li.bypostauthor { background:#f5f5f5;  }
+ol.commentlist li.comment-author-admin {background:#f5f5f5; }
+ol.commentlist li p{color: #555; line-height: 20px; font-size: 12px; margin:50px 0 0 0;}
+ol.commentlist li.comment div.reply { display:none; }
+ol.commentlist li.comment div.reply:hover { background-color:#555; }
+ol.commentlist li.comment div.reply a {color: #fff; }
+ol.commentlist li ul.children { list-style:none; margin:20px 0 0 0px; text-indent:0;  }
+ol.commentlist li ul.children li.depth-2 { margin:0 0 3px 50px; width:95%; }
+ol.commentlist li ul.children li.depth-3 { margin:0 0 3px 30px; width:90%;}
+ol.commentlist li ul.children li.depth-4 { margin:0 0 3px 30px; width:85%; }
+ol.commentlist li ul.children li.depth-5 { margin:0 0 3px 30px; width:80%; }
+input#submit{margin: 20px 0 0 0; width: 100%; text-align:center; border: 1px solid #555; color:#fff; font-size: 11px; font-weight: bold; padding: 0px 15px; background-color:#777; background-image: url(images/reflex.png); background-position: 0px center; background-repeat: repeat-x; }
+input#submit:hover{border: 1px solid #222; background-color:#555; background-image: url(images/reflex.png); background-position: 0px center; background-repeat: repeat-x;  }
+
+/* Buttons Class */
+.more-link{height: 20px; line-height: 40px; width:auto; font-size: 11px;  font-weight:bold;  background-color:#eee; background-image: url(images/bullet.gif); background-position: 5px 8px; background-repeat: no-repeat;}
+a.more-link:hover{text-decoration:underline;}
+.submit_button{margin: 20px 0 0 0; float: right; width: 200px; border: 1px solid #555;  font-size: 11px; font-weight: bold; padding: 0px 15px; background-color:#777; background-image:url(images/reflex.png); background-position: 0px center; background-repeat: repeat-x; color: #fff; }  /* Submit Button for comments */
+.submit_button:hover{font-size: 11px; border: 1px solid #222;  background-color:#555; background-image: url(images/reflex.png); background-position: 0px center; background-repeat: repeat-x ; font-weight: bold; color: #009DFF; padding: 0px 15px; color: #fff; }
+
+ /* Special Class ------------------------------------------------------------------------------------------------------------------------ */
+.hidden{display: none; visibility:hidden;}
+.go_mobile{visibility:visible; width:20%!important; height:30px; margin:3px 0 0 0!important; float:right!important; font-size:11px; display:block;}
+.input_box{margin: 0 0 30px 0; }
+.form_box{margin: 50px 0 0 0; width:610px;}
+.powered{float: right;}
+
+ /* Special Class ------------------------------------------------------------------------------------------------------------------------ */
+.form_box{ width:100%;}
